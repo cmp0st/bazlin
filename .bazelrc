@@ -1,0 +1,1 @@
+common --enable_bzlmod --java_runtime_version=remotejdk_21

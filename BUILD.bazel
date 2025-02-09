@@ -1,0 +1,15 @@
+load("@rules_kotlin//kotlin:lint.bzl", "ktlint_test")
+load("@rules_kotlin//kotlin:jvm.bzl", "kt_jvm_binary")
+
+ktlint_test(
+  name="ktlint",
+  srcs=glob(["*.kt"]),
+  config=None
+)
+
+kt_jvm_binary(
+  name="bazlin",
+  srcs=glob(["*.kt"]),
+  main_class="MainKt", #NB: the compile appents `Kt` to class of kotlin files
+  deps=None
+)
