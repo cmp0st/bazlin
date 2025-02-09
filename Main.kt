@@ -1,3 +1,9 @@
+package bazlin
+
+import bazlin.math.add
+
 fun main() {
-    println("Hello, World")
+    val a = "Hello, "
+    val b = "World"
+    println(add(a, b))
 }

@@ -1,0 +1,15 @@
+load("@rules_kotlin//kotlin:lint.bzl", "ktlint_test")
+load("@rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
+
+ktlint_test(
+  name="ktlint",
+  srcs=glob(["*.kt"]),
+  config=None
+)
+
+kt_jvm_library(
+  name="math",
+  srcs=glob(["*.kt"]),
+  visibility = ["//visibility:public"],
+  deps=None
+)

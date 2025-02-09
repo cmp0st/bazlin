@@ -10,6 +10,8 @@ ktlint_test(
 kt_jvm_binary(
   name="bazlin",
   srcs=glob(["*.kt"]),
-  main_class="MainKt", #NB: the compile appents `Kt` to class of kotlin files
-  deps=None
+  main_class="bazlin.MainKt", #NB: the compile appents `Kt` to class of kotlin files
+  deps=[
+    "//math",
+  ]
 )
